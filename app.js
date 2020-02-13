@@ -40,7 +40,6 @@ function TicTacTocGame() {
 			el.classList.remove('✖️');
 			el.classList.remove('⭕️');
 			el.removeEventListener('click', haddleClick);
-			console.clear();
 			el.addEventListener('click', haddleClick, { once: true });
 		});
 
