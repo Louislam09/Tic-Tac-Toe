@@ -1,0 +1,140 @@
+body {
+	background-color: #333333;
+}
+
+.board {
+	max-width: 320px;
+	height: 320px;
+	margin: auto;
+	margin-bottom: 100px;
+}
+.table {
+	max-width: 320px;
+	height: 320px;
+	margin: auto;
+	margin-bottom: 100px;
+	position: fixed;
+	top: 150px;
+	left: 150px;
+}
+table {
+	width: 320px;
+	margin: auto;
+	margin-bottom: 100px;
+	text-align: center;
+	border-collapse: collapse;
+}
+.table-title {
+	text-align: center;
+	background-color: #00000085;
+}
+td:nth-child(1) {
+	background-color: #d8dadb85;
+	border: 1px solid black;
+	color: white;
+}
+td:nth-child(2) {
+	background-color: #8ba8a885;
+	border: 1px solid black;
+	color: white;
+}
+
+thead th {
+	border: 1px solid black;
+	background-color: #a5edff85;
+	color: white;
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+}
+
+.row {
+	height: 100px;
+}
+.col {
+	height: 100px;
+	width: 100px;
+	float: left;
+	font-size: 80px;
+	text-align: center;
+	line-height: 100px;
+	text-shadow: 0 0 47px #a5edff85;
+}
+.col.O {
+	color: rgb(255, 136, 0);
+}
+.col.X {
+	color: rgb(178, 32, 76);
+}
+
+.col:hover {
+	background-color: rgba(11, 11, 180, 0.1);
+}
+
+.border-b {
+	border-bottom: 10px double black;
+}
+.border-r {
+	border-right: 10px double black;
+}
+.winner {
+	color: goldenrod;
+	/* animation: animate 1s linear infinite; */
+}
+
+.winning-messange {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .7);
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 5rem;
+	flex-direction: column;
+	animation: animate 3s linear infinite;
+}
+
+.winning-messange button {
+	font-size: 3rem;
+	background-color: white;
+	border: 1px solid black;
+	padding: .25em .5em;
+	cursor: pointer;
+}
+.winning-messange button:hover {
+	background-color: black;
+	border-color: white;
+	color: white;
+}
+
+.winning-messange.show {
+	display: flex;
+}
+.autor {
+	position: fixed;
+	bottom: 30%;
+	right: 25%;
+	color: white;
+}
+
+@keyframes animate {
+	0% {
+		color: white;
+		font-size: 0px;
+	}
+	50% {
+		color: white;
+		font-size: 135px;
+	}
+
+	100% {
+		font-size: 290px;
+		color: black;
+	}
+}
