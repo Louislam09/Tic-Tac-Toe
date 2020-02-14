@@ -122,14 +122,14 @@ function TicTacTocGame() {
 							player2Score.innerText = Math.ceil(score2);
 
 							positions[index].classList.remove('0');
-							winningText.innerText = `⭕️'s Wins!`;
+							winningText.innerText = `${names[1]}'s Wins!`;
 						} else {
 							// set points
 							score1 += 1 / 3;
 							player1Score.innerText = Math.ceil(score1);
 
 							positions[index].classList.remove('X');
-							winningText.innerText = `✖️'s Wins!`;
+							winningText.innerText = `${names[0]}'s Wins!`;
 						}
 
 						winningMessange.classList.add('show');
