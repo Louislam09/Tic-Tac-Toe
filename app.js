@@ -1,13 +1,19 @@
 var names = [ prompt(`PLAYER-1'S NAME : `), prompt(`PLAYER-2'S NAME :`) ];
+var turnSelector = prompt(`WHO IS GOING TO PLAY FIRST ? \n 1) ${names[0]}(✖️) \n 2) ${names[1]}(⭕️)`);
+
+turnSelector > 2 ? (turnSelector = 1) : turnSelector;
+
 TicTacTocGame();
 
 function TicTacTocGame() {
 	const ceilElements = Array.from(document.querySelectorAll('.col'));
-	let circleTurn = true;
+	let circleTurn;
+	circleTurn = turnSelector === '1' ? true : turnSelector === '2' ? false : true;
 	var winner = false;
 	const winningText = document.querySelector('.winning-text');
 	const winningMessange = document.getElementById('winningMessange');
 	const restartButton = document.getElementById('RestartButton');
+	const isTurn = document.getElementById('isTurn');
 
 	// players
 	const player1 = document.getElementById('player1');
@@ -33,6 +39,8 @@ function TicTacTocGame() {
 	restartButton.addEventListener('click', start);
 
 	function start() {
+		isTurn.innerText = circleTurn === true ? `${names[0]}'s Turn ` : ` ${names[1]}'s Turn `;
+
 		board.positions.forEach((el) => {
 			winner = false;
 			el.innerText = '';
@@ -80,9 +88,18 @@ function TicTacTocGame() {
 	function placerMark(ceil, currentPlayer) {
 		ceil.innerText = currentPlayer;
 	}
-
+	var dot = '';
 	function swapTurn() {
 		circleTurn = !circleTurn;
+		var loads = setInterval(() => {
+			dot += '.';
+
+			if (dot === '....') {
+				dot = '.';
+				clearInterval(loads);
+			}
+			isTurn.innerText = circleTurn === true ? `${names[0]}'s Turn${dot} ` : ` ${names[1]}'s Turn${dot} `;
+		}, 1000);
 	}
 
 	function Board() {

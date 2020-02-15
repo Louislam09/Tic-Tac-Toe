@@ -1,12 +1,21 @@
-/* ----------- dispositivos móviles ----------- */
-/* cambios css para modo vertical y horizontal */
+span {
+	color: green;
+}
+
+/* ----------  computers ----------------- */
 @media only screen and (min-device-width: 1024px) {
 	/* inserta aquí tu código */
 
 	body {
 		background-color: #333333;
 	}
-
+	h1,
+	h2 {
+		color: rgb(186, 198, 221);
+	}
+	.is-turn {
+		padding-left: 30%;
+	}
 	.board {
 		max-width: 320px;
 		height: 320px;
@@ -147,14 +156,20 @@
 }
 
 /* ----------- dispositivos móviles ----------- */
-/* cambios css para modo vertical y horizontal */
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
 	/* inserta aquí tu código */
 
 	body {
 		background-color: #333333;
 	}
-
+	h1,
+	h2 {
+		color: rgb(186, 198, 221);
+	}
+	.is-turn {
+		padding-left: 30%;
+		padding-top: -50px;
+	}
 	.board {
 		max-width: 320px;
 		height: 320px;
