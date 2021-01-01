@@ -1,4 +1,4 @@
-var names = [ prompt(`PLAYER-1'S NAME : `), prompt(`PLAYER-2'S NAME :`) ];
+var names = [ prompt(`NAME OF PLAYER 1 : `), prompt(`NAME OF PLAYER 2 :`) ];
 var turnSelector = prompt(`WHO IS GOING TO PLAY FIRST ? \n 1) ${names[0]}(✖️) \n 2) ${names[1]}(⭕️)`);
 
 turnSelector > 2 ? (turnSelector = 1) : turnSelector;
